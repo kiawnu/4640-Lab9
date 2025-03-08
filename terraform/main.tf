@@ -18,10 +18,16 @@ locals {
   project_name = "lab_week_9"
 }
 
-# get the most recent ami for Ubuntu 24.04 owned by amazon
+# get the most recent version of your AMI created with packer template
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 data "aws_ami" "ubuntu" {
-  # COMPLETE ME
+  most_recent = true
+  owners      = ["self"]
+
+  filter {
+    name   = "name"
+    values = ["packer-ansible-nginx"]
+  }
 }
 
 # Create a VPC
