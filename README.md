@@ -3,7 +3,8 @@
 
 ##### Generating/Importing Key
 
-```ssh-keygen -t ed25519 -C "lab 9" -f aws
+```
+ssh-keygen -t ed25519 -C "lab 9" -f aws
 
 ./import_lab_key /home/kiki/.ssh/aws.pub
 
@@ -11,7 +12,8 @@
 
 ##### Packer commands
 
-```packer init .
+```
+packer init .
 packer validate .
 packer build . 
 
@@ -20,7 +22,8 @@ packer build .
 
 ##### Terraform commands
 
-```terraform init
+```
+terraform init
 terraform validate 
 terrform plan -out plan1
 terraform apply 
